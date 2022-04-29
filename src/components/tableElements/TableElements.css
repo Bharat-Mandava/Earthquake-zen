@@ -1,0 +1,20 @@
+.Table-Row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.Table-Key {
+    width: 100px;
+    display: block;
+    color: #444444;
+}
+
+.Table-Value {
+    width: 350px;
+    color: #777777;
+}

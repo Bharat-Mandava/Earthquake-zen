@@ -1,0 +1,18 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0px 8px;
+    background-color: #ededed;
+    font-weight: bold;
+}
+
+.Nav-Title {
+    color: #777777;
+    font-size: 26px;
+}
+
+.App-Logo {
+    height: 35px
+}

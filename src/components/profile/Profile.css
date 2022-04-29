@@ -1,0 +1,21 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 650px;
+    margin: 25px auto;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.profile-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.image-container img {
+    width: 150px;
+    margin: 0px 15px;
+}

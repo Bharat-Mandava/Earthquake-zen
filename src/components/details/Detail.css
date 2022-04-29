@@ -1,0 +1,13 @@
+.Details-Container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 450px;
+    margin: 20px auto;
+    flex-direction: column;
+}
+
+.Sub-Container .Table-Row {
+    margin-top: 15px;
+    line-height: 0.5;
+}
