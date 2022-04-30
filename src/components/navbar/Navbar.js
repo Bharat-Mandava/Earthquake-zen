@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./navbar.css";
 
 export default function Navbar () {
     return (
-        <nav className="Navbar">
+        <nav className="navbar">
             <Link to="/">
-                <img src="https://www.realtor.com/realtor-com.png" className="App-Logo" alt="logo"/>
+                <img src="https://www.realtor.com/realtor-com.png" className="app-logo" alt="logo"/>
             </Link>
-            <span className="Nav-Title">Earthquake Zen Garden</span>
+            <span className="nav-title">Earthquake Zen Garden</span>
             <Link to="/profile">
-                <span className="Welcome-Text" aria-label="User Profile Link">Welcome Sally</span>
+                <span className="welcome-text" aria-label="User Profile Link">Welcome Sally</span>
             </Link>
         </nav>
     )

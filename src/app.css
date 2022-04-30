@@ -4,3 +4,11 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+a {
+    color: #0011bb;
+}
+
+a:visited {
+    color: #6600cc;
+}

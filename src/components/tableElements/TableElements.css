@@ -1,4 +1,4 @@
-.Table-Row {
+.table-row {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -8,13 +8,13 @@
     line-height: 1.4;
 }
 
-.Table-Key {
+.table-key {
     width: 100px;
     display: block;
     color: #444444;
 }
 
-.Table-Value {
+.table-value {
     width: 350px;
     color: #777777;
 }

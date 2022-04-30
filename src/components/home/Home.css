@@ -1,4 +1,4 @@
-.Home-Container {
+.home-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
     font-weight: 600;
 }
 
-.Features-Container {
+.features-container {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -17,20 +17,20 @@
     margin: auto;
 }
 
-.Table-Heads {
+.table-heads {
     color: #444444;
     font-size: 14px;
     line-height: 2.5;
     margin: 10px;
 }
 
-.Feature-Table-Row td {
+.feature-table-row td {
     text-align: left;
     font-size: 14px;
     padding: 0px 6px;
     font-weight: 600;
 }
 
-.Feature-Table-Row td:nth-child(2) {
+.feature-table-row td:nth-child(2) {
     text-align: center;
 }

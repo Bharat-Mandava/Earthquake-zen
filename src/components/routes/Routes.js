@@ -10,17 +10,18 @@ export default function Routes () {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <Router>
-                    <NavbarComponent />
-                    <Route exact path={"/"}>
-                        <HomeComponent />
-                    </Route>
-                    <Route exact path={"/profile"}>
-                        <ProfileComponent />
-                    </Route>
-                    <Route exact path={"/detail"}>
-                        <DetailComponent />
-                    </Route>
-                    <Redirect to="/" />
+                <NavbarComponent />
+                <Route exact path={"/"}>
+                    <HomeComponent />
+                </Route>
+                <Route exact path={"/profile"}>
+                    <ProfileComponent />
+                </Route>
+                <Route exact path={"/detail"}>
+                    <DetailComponent />
+                </Route>
+                {/* redirect all other routes to homepage */}
+                <Redirect to="/" />
             </Router>
         </Suspense>
     );

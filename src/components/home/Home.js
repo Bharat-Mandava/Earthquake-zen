@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import SubHeader from "../subHeader/SubHeader";
+import SubHeader from "../subHeader/SubHeader"
 import { convertTime } from "../../helpers/helpers";
 import { featuresUnSorted } from "../../../data";
 import "./Home.css"
@@ -14,11 +14,9 @@ const {title} =  {
       "count": 9
     }
 
-
 const tableHeads = ['Title', 'Magnitude', 'Time'];
 
 export default function Home() {
-
     const [features, setFeatures] = useState(featuresUnSorted);
     const [sortingDirection, setSortingDirection] = useState('unsorted')
     const sortColumn = (columnHead) => {
@@ -29,12 +27,12 @@ export default function Home() {
             "Title": "place",
             "Magnitude": "mag",
             "Time": "time"
-        }
-        sortedFeatures.sort((a,b)=>{
+        };
+        sortedFeatures.sort((a,b) => {
             const propA = a.properties[keyMap[columnHead]];
             const propB = b.properties[keyMap[columnHead]];
-            console.log(propA, propB)
-
+            
+            // By default we map data unsorted, then we will sort as ascending or descending
             if(sortingDirection === "unsorted" || sortingDirection === "ascending") {
                 if(propA < propB) return -1;
                 if(propA > propB) return 1;
@@ -49,45 +47,43 @@ export default function Home() {
         sortingDirection === "unsorted" || sortingDirection === "ascending" ? setSortingDirection("descending") : setSortingDirection("ascending");
     }
     
-  return(
-    <div className= "Home-Container">
-        <SubHeader text={title} />
-        <div className="Features-Container">
-            <table>
-                <thead>
-                    <tr>
-                        {tableHeads.map((columnHead,index)=>{
+    return(
+        <div className= "home-container">
+            <SubHeader text={title} />
+            <div className="features-container">
+                <table>
+                    <thead>
+                        <tr>
+                            {tableHeads.map((columnHead,index)=>{
+                                return(
+                                    <th className="table-heads" key={index} onClick={()=> sortColumn(columnHead)}>
+                                        {columnHead}
+                                    </th>
+                                )
+                            })}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {features.map((feature, index) => {
                             return(
-                                <th className="Table-Heads" key={index} onClick={()=> sortColumn(columnHead)}>
-                                    {columnHead}
-                                </th>
+                            <tr className="feature-table-row" key={index}>
+                                <td>
+                                    <Link to={{pathname: "/detail", feature}}>
+                                        {feature.properties.place}
+                                    </Link>
+                                </td>
+                                <td>
+                                    {feature.properties.mag}
+                                </td>
+                                <td>
+                                    {`${convertTime(feature.properties.time)}`}
+                                </td>
+                            </tr>
                             )
                         })}
-                    </tr>
-                </thead>
-                <tbody>
-                    {features.map((feature, index) => {
-                        return(
-                        <tr className="Feature-Table-Row" key={index}>
-                            <td>
-                                <Link to={{pathname: "/detail", feature}}>
-                                    {feature.properties.place}
-                                </Link>
-                            </td>
-                            <td>
-                                {feature.properties.mag}
-                            </td>
-                            <td>
-                                {`${convertTime(feature.properties.time)}`}
-                            </td>
-                        </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-
-  )
-
+    )
 }

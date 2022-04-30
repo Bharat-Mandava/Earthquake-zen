@@ -1,7 +1,7 @@
 import React from "react";
 import SubHeader from "../subHeader/SubHeader"
 import { TableRow, TableKey, TableValue } from "../tableElements/TableElements";
-import "./Profile.css"
+import "./profile.css"
 
 const {firstName, lastName, avatarImage, phone, email, bio} =  {
     "firstName": "Sally",

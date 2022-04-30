@@ -1,17 +1,17 @@
 import React from "react";
-import "./TableElements.css"
+import "./tableElements.css"
 
 export const TableRow = (props) => {
     return (
-        <div className="Table-Row">
+        <div className="table-row">
             {props.children}
         </div>
     )
 }
 export const TableKey = ({text}) => {
-  return <span className="Table-Key" aria-label={text}>{text}</span>;
+  return <span className="table-key" aria-label={text}>{text}</span>;
 }
 
 export const TableValue = ({text}) => {
-    return <span className="Table-Value" aria-label={text}>{text}</span>;
+    return <span className="table-value" aria-label={text}>{text}</span>;
   }

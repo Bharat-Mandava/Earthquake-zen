@@ -1,6 +1,6 @@
 import React from "react";
-import "./SubHeader.css"
+import "./subHeader.css"
 
 export default function subHeader({text}) {
-  return <span className="Sub-Heading">{text}</span>;
+  return <span className="sub-heading">{text}</span>;
 }
