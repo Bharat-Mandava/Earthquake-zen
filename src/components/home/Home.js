@@ -68,9 +68,9 @@ export default function Home() {
 						</tr>
 					</thead>
 					<tbody>
-						{features.map((feature, index) => {
+						{features.map((feature) => {
 							return (
-								<tr className='feature-table-row' key={index}>
+								<tr className='feature-table-row' key={feature.id}>
 									<td>
 										<Link to={{ pathname: "/detail", feature }}>
 											{feature.properties.place}
